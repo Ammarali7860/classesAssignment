@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes</title>
+</head>
+
+<body>
+    <script>
+        class Vehicle {
+            constructor(name,model,color,type ){
+                this.name = name;
+                this.model = model;
+                this.color = color;
+                this.type = type;
+
+            }
+            start(){
+                console.log(`the ${this.name} is ready for drive`);
+            }
+            openDoor(){
+                    console.log("the door is opened");
+                
+            }
+            
+        }
+
+        class Car extends personalAccount(){
+            constructor(maxSpeed,noOfDoors){
+                super(name,model,color,type);
+                this.maxSpeed= maxSpeed;
+                this.noOfDoors = noOfDoors;
+            }
+
+        }
+
+        class Bus extends personalAccount(){
+            constructor(noOfSeat){
+                super(name,model,color,type);
+                this.noOfSeat= noOfSeat;
+
+            }
+        }
+        class truck extends personalAccount(){
+            constructor(noOfTires){
+                super(name,model,color,type);
+                this.noOfTires= noOfTires;
+
+            }
+        }
+        let car1 = new Car("civic",2022,"blue","Automatic","150kph",4);
+        console.log(car1.maxSpeed);
+
+        class PersonAccount {
+            constructor(firstName, lastName, income, expensesProperty, totalIncome, totalExpense, addincome, addexpense, accountbalance) {
+
+                this.firstName = firstName;
+                this.lastName = lastName;
+                this.income = income;
+                this.expensesProperty = expensesProperty;
+
+
+            }
+            totalIncome() {
+                income.forEach()
+                return this.income.sum() - this.expensesProperty;
+
+
+            }
+            totalExpense() {
+                return this.expensesProperty.sum();
+            }
+            addincome() {
+                let reducer = (accumulator, currentValue) => accumulator + currentValue;
+                let sum = this.income.reduce(reducer);
+                return sum;
+
+
+            }
+            addexpense() {
+                let reducer = (accumulator, currentValue) => accumulator + currentValue;
+                let sum1 = this.expensesProperty.reduce(reducer);
+                return sum1;
+
+            }
+
+            accountBalance(){
+                let reducer = (accumulator, currentValue) => accumulator + currentValue;
+                let sum = this.income.reduce(reducer);
+                let reducer1 = (accumulator, currentValue) => accumulator + currentValue;
+                let sum1 = this.expensesProperty.reduce(reducer1);
+                return sum - sum1;
+                   
+            }
+        }
+        const perAcc = new PersonAccount("ammar", "ali", [500, 1000, 400], [150, 210, 420]);
+        console.log(perAcc.firstName);
+        console.log(perAcc.addincome());
+        console.log(perAcc.addexpense());
+        console.log(perAcc.accountBalance());
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
